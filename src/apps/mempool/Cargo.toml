@@ -1,0 +1,33 @@
+[package]
+name = "app-mempool"
+version = "0.1.0"
+authors = [ "Automata Authors" ]
+edition = "2021"
+
+[features]
+default = ["std"]
+
+std = ["glog/std", "apps/std", "base/std", "eth_types/std", "serde/std", "serde_json/std", "eth_client/std", "jsonrpc/std", "net-http/std", "txpool/std", "crypto/std", "evm_executor/std", "statedb/std", "block_builder/std", "mempool/std"]
+tstd = ["sgxlib/tstd", "glog/tstd", "apps/tstd", "base/tstd", "eth_types/tstd", "serde/tstd", "serde_json/tstd", "eth_client/tstd", "jsonrpc/tstd", "net-http/tstd", "txpool/tstd", "crypto/tstd", "evm_executor/tstd", "statedb/tstd", "block_builder/tstd", "mempool/tstd", "sgxlib-ra/tstd"]
+sgx = ["sgxlib-ra", "mempool/sgx"]
+
+[dependencies]
+apps = { path = "../", default-features = false }
+sgxlib = { git = "https://github.com/automata-network/sgxlib", default-features = false }
+glog = { git = "https://github.com/automata-network/glog-rs", default-features = false }
+base = { git = "https://github.com/automata-network/base-rs", default-features = false }
+eth_types = { git = "https://github.com/automata-network/eth-types-rs", default-features = false } 
+eth_client = { path = "../../common/eth_client", default-features = false }
+jsonrpc = { git = "https://github.com/automata-network/jsonrpc-rs", default-features = false }
+net-http = { git = "https://github.com/automata-network/net-http-rs", default-features = false }
+txpool = { path = "../../common/txpool", default-features = false }
+crypto = { git = "https://github.com/automata-network/crypto-rs", default-features = false }
+evm_executor = { path = "../../common/evm_executor", default-features = false }
+statedb = { git = "https://github.com/automata-network/statedb-rs", default-features = false }
+block_builder = { path = "../../common/block_builder", default-features = false }
+mempool = { path = "../../common/mempool", default-features = false }
+sgxlib-ra = { optional = true, git = "https://github.com/automata-network/sgxlib-ra", default-features = false }
+
+serde = { git = "https://github.com/automata-network/sgxlib-thirdparty", default-features = false }
+serde_json = { git = "https://github.com/automata-network/sgxlib-thirdparty", default-features = false }
+

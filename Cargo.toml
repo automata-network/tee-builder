@@ -1,0 +1,43 @@
+# [package]
+# version = "0.1.0"
+# authors = ["Automata Team"]
+# license = "Apache-2.0"
+# edition = "2021"
+
+[workspace]
+members = [
+    "bin/std/block-builder",
+    "bin/std/pool-aggregator",
+    "bin/std/simulator",
+    "bin/std/mempool",
+
+    "src/apps",
+    "src/apps/block-builder",
+    "src/apps/pool-aggregator",
+    "src/apps/simulator",
+    "src/apps/mempool",
+
+    "src/common/eth_client",
+    "src/common/mev_boost",
+    "src/common/evm_executor",
+    "src/common/txpool",
+    "src/common/block_builder",
+    "src/common/mempool",
+]
+
+[patch.'https://github.com/apache/teaclave-sgx-sdk.git']
+sgx_alloc = { git = "https://github.com/automata-network/incubator-teaclave-sgx-sdk", tag = "v1.1.4" }
+sgx_backtrace_sys = { git = "https://github.com/automata-network/incubator-teaclave-sgx-sdk", tag = "v1.1.4" }
+sgx_build_helper = { git = "https://github.com/automata-network/incubator-teaclave-sgx-sdk", tag = "v1.1.4" }
+sgx_demangle = { git = "https://github.com/automata-network/incubator-teaclave-sgx-sdk", tag = "v1.1.4" }
+sgx_libc = { git = "https://github.com/automata-network/incubator-teaclave-sgx-sdk", tag = "v1.1.4" }
+# sgx_rand = { git = "https://github.com/automata-network/incubator-teaclave-sgx-sdk", tag = "v1.1.4" }
+sgx_tcrypto = { git = "https://github.com/automata-network/incubator-teaclave-sgx-sdk", tag = "v1.1.4" }
+sgx_ucrypto = { git = "https://github.com/automata-network/incubator-teaclave-sgx-sdk", tag = "v1.1.4" }
+sgx_tkey_exchange = { git = "https://github.com/automata-network/incubator-teaclave-sgx-sdk", tag = "v1.1.4" }
+sgx_tprotected_fs = { git = "https://github.com/automata-network/incubator-teaclave-sgx-sdk", tag = "v1.1.4" }
+sgx_trts = { git = "https://github.com/automata-network/incubator-teaclave-sgx-sdk", tag = "v1.1.4" }
+sgx_tstd = { git = "https://github.com/automata-network/incubator-teaclave-sgx-sdk", tag = "v1.1.4" }
+sgx_types = { git = "https://github.com/automata-network/incubator-teaclave-sgx-sdk", tag = "v1.1.4" }
+sgx_unwind = { git = "https://github.com/automata-network/incubator-teaclave-sgx-sdk", tag = "v1.1.4" }
+sgx_urts = { git = "https://github.com/automata-network/incubator-teaclave-sgx-sdk", tag = "v1.1.4" }

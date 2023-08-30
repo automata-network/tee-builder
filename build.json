@@ -1,0 +1,13 @@
+{
+	"language": "rust",
+	"input": {
+		"cmd": "SGX=1 RELEASE=1 ./scripts/block-builder.sh",
+		"vendor": "SGX=1 RELEASE=1 FETCH=1 ./scripts/block-builder.sh"
+	},
+	"output": {
+		"files": [
+			"bin/sgx/target/release/automata-block-builder",
+			"bin/sgx/target/release/automata_block_builder_enclave.signed.so"
+		]
+	}
+}

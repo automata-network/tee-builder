@@ -1,0 +1,10 @@
+[package]
+name = "pool-aggregator"
+version = "1.0.0"
+license = "Apache-2.0"
+edition = "2021"
+
+[dependencies]
+glog = { git = "https://github.com/automata-network/glog-rs" }
+apps = { path = "../../../src/apps" }
+app-pool-aggregator = { path = "../../../src/apps/pool-aggregator" }

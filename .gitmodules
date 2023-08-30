@@ -1,0 +1,6 @@
+[submodule "src/thirdparty/blst/blst"]
+	path = src/thirdparty/blst/blst
+	url = https://github.com/supranational/blst.git
+[submodule "src/thirdparty/gsrs/gsrs"]
+	path = src/thirdparty/gsrs/gsrs
+	url = https://github.com/rrevenantt/gsrs.git

@@ -1,0 +1,30 @@
+[package]
+name = "mempool"
+version = "0.1.0"
+authors = ["Automata Team"]
+edition = "2021"
+license = "Apache-2.0"
+
+[features]
+default = ["std"]
+sgx = ["sgxlib-ra"]
+
+std = ["statedb/std", "eth_types/std", "txpool/std", "glog/std", "jsonrpc/std", "net-http/std", "crypto/std", "serde/std", "serde_json/std", "base/std", "eth_client/std"]
+tstd = ["sgxlib/tstd", "statedb/tstd", "eth_types/tstd", "txpool/tstd", "glog/tstd", "jsonrpc/tstd", "net-http/tstd", "crypto/tstd", "serde/tstd", "serde_json/tstd", "base/tstd", "sgxlib-ra/tstd", "eth_client/tstd"]
+
+[dependencies]
+sgxlib = { git = "https://github.com/automata-network/sgxlib", default-features = false }
+sgxlib-ra = { optional = true, git = "https://github.com/automata-network/sgxlib-ra", default-features = false }
+statedb = { git = "https://github.com/automata-network/statedb-rs", default-features = false }
+base = { git = "https://github.com/automata-network/base-rs", default-features = false }
+eth_types = { git = "https://github.com/automata-network/eth-types-rs", default-features = false }
+eth_client = { path = "../eth_client", default-features = false }
+txpool = { path = "../txpool", default-features = false }
+glog = { git = "https://github.com/automata-network/glog-rs", default-features = false }
+jsonrpc = { git = "https://github.com/automata-network/jsonrpc-rs", default-features = false }
+crypto = { git = "https://github.com/automata-network/crypto-rs", default-features = false }
+net-http = { git = "https://github.com/automata-network/net-http-rs", default-features = false }
+
+serde = { git = "https://github.com/automata-network/sgxlib-thirdparty", default-features = false }
+serde_json = { git = "https://github.com/automata-network/sgxlib-thirdparty", default-features = false }
+

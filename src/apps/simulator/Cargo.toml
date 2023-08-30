@@ -1,0 +1,29 @@
+[package]
+name = "app-simulator"
+version = "0.1.0"
+authors = [ "Automata Authors" ]
+edition = "2021"
+
+[features]
+default = ["std"]
+
+std = ["glog/std", "apps/std", "eth_types/std", "jsonrpc/std", "serde/std", "serde_json/std", "block_builder/std", "base/std", "eth_client/std", "statedb/std", "txpool/std", "net-http/std", "crypto/std", "mev_boost/std"]
+tstd = ["sgxlib/tstd", "glog/tstd", "apps/tstd", "eth_types/tstd", "jsonrpc/tstd", "serde/tstd", "serde_json/tstd", "block_builder/tstd", "base/tstd", "eth_client/tstd", "statedb/tstd", "txpool/tstd", "net-http/tstd", "crypto/tstd", "mev_boost/tstd"]
+
+[dependencies]
+apps = { path = "../", default-features = false }
+sgxlib = { git = "https://github.com/automata-network/sgxlib", default-features = false }
+glog = { git = "https://github.com/automata-network/glog-rs", default-features = false }
+eth_types = { git = "https://github.com/automata-network/eth-types-rs", default-features = false } 
+jsonrpc = { git = "https://github.com/automata-network/jsonrpc-rs", default-features = false }
+base = { git = "https://github.com/automata-network/base-rs", default-features = false }
+block_builder = { path = "../../common/block_builder", default-features = false }
+eth_client = { path = "../../common/eth_client", default-features = false }
+statedb = { git = "https://github.com/automata-network/statedb-rs", default-features = false }
+mev_boost = { path = "../../common/mev_boost", default-features = false }
+txpool = { path = "../../common/txpool", default-features = false }
+crypto = { git = "https://github.com/automata-network/crypto-rs", default-features = false }
+net-http = { git = "https://github.com/automata-network/net-http-rs", default-features = false }
+
+serde = { git = "https://github.com/automata-network/sgxlib-thirdparty", default-features = false }
+serde_json = { git = "https://github.com/automata-network/sgxlib-thirdparty", default-features = false }

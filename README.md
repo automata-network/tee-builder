@@ -1,4 +1,4 @@
-# Hesto
+# TEE-builder
 
 ## Overview
 

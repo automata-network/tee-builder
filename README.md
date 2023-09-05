@@ -1,5 +1,10 @@
 # TEE-builder
 
+[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+
+**WARNING: This is not for production use. There are debug and info logs that leaks information within the enclave.**
+
+
 ## Overview
 
 ![architecture](docs/architecture.png)

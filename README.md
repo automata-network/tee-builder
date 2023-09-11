@@ -24,7 +24,7 @@ Within this architectural framework, the mempool is responsible for receiving us
 
 ## See also
 
-该项目使用了大量SGX Libraries
+The project extensively utilizes SGX Libraries:
 * [sgxlib](https://github.com/automata-network/sgxlib)
 * [sgxlib-thirdparty](https://github.com/automata-network/sgxlib-thirdparty)
 * [statedb-rs](https://github.com/automata-network/statedb-rs)

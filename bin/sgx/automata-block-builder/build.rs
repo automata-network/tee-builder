@@ -16,5 +16,5 @@
 // under the License..
 
 fn main() {
-    ata_sgx_builder::GeodeBuild::new().build();
+    ata_sgx_builder::GeodeBuild::new().build(ata_sgx_builder::LinkType::Epid);
 }

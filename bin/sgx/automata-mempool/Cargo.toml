@@ -18,6 +18,6 @@ apps = { path = "../../../src/apps" }
 sgxlib-enclave = { git = "https://github.com/automata-network/sgxlib" }
 base = { git = "https://github.com/automata-network/base-rs" }
 crypto = { git = "https://github.com/automata-network/crypto-rs" }
-sgxlib-ra = { git = "https://github.com/automata-network/sgxlib-ra" }
+sgxlib-ra = { git = "https://github.com/automata-network/sgxlib-ra", features = ["epid"] }
 
 serde_json = { git = "https://github.com/automata-network/sgxlib-thirdparty" }
